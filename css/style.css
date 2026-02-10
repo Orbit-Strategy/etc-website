@@ -81,19 +81,19 @@ img {
 
 .hero__photo--1 {
   flex: 0 0 68%;
-  /* Placeholder teal/photo gradient — replace with actual hero image */
-  background: linear-gradient(135deg, #1a8a7a 0%, #2ab5a0 40%, #168878 100%);
+  background-image: url('../assets/images/hero.jpg');
 }
 
 .hero__photo--2 {
   flex: 0 0 24%;
-  /* Placeholder complementary tone */
-  background: linear-gradient(135deg, #1a8a7a 0%, #24a08e 60%, #147060 100%);
+  background-image: url('../assets/images/hero.jpg');
+  background-position: 60% center;
 }
 
 .hero__photo--3 {
   flex: 0 0 8%;
-  background: linear-gradient(135deg, #1a8a7a 0%, #1d9585 100%);
+  background-image: url('../assets/images/hero.jpg');
+  background-position: 80% center;
 }
 
 .hero__overlay {
