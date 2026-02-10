@@ -7,7 +7,7 @@
   /* ═══════════════════════════════════════════
      PASSWORD GATE
      ═══════════════════════════════════════════ */
-  var PASS_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // sha256 of 'password'
+  var PASS_HASH = '60e7bc33bf8968fb16017cb8e1420241aab90ea4d578ab023684ea96b17b8dd1';
   var gate = document.getElementById('gate');
   var gateForm = document.getElementById('gate-form');
   var gateInput = document.getElementById('gate-password');
