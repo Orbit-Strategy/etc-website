@@ -5,31 +5,9 @@
   'use strict';
 
   /* ═══════════════════════════════════════════
-     STICKY NAV — IntersectionObserver
+     GLOBE SPIN ON SCROLL (nav monogram)
      ═══════════════════════════════════════════ */
-  const hero = document.getElementById('hero');
-  const nav = document.getElementById('nav');
-
-  if (hero && nav) {
-    const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            nav.classList.remove('nav--visible');
-          } else {
-            nav.classList.add('nav--visible');
-          }
-        });
-      },
-      { threshold: 0.05 }
-    );
-    observer.observe(hero);
-  }
-
-  /* ═══════════════════════════════════════════
-     GLOBE SPIN ON SCROLL
-     ═══════════════════════════════════════════ */
-  const globe = document.getElementById('globe');
+  var globe = document.getElementById('globe');
   if (globe) {
     var ticking = false;
     window.addEventListener('scroll', function () {
@@ -37,7 +15,7 @@
         requestAnimationFrame(function () {
           var scrollY = window.scrollY || window.pageYOffset;
           var rotation = scrollY * 0.15;
-          globe.style.transform = 'translateY(-50%) rotateY(' + rotation + 'deg)';
+          globe.style.transform = 'translateX(-50%) rotateY(' + rotation + 'deg)';
           ticking = false;
         });
         ticking = true;

@@ -135,20 +135,10 @@ img {
    STICKY NAV
    ═══════════════════════════════════════════ */
 .nav {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
   background: var(--color-white);
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.3s ease;
-}
-
-.nav--visible {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .nav__inner {
@@ -372,37 +362,19 @@ img {
   justify-content: space-between;
 }
 
-.footer__heading {
-  font-size: clamp(32px, 4.5vw, 64px);
+.footer__line {
+  font-size: clamp(24px, 3.5vw, 48px);
   text-transform: uppercase;
   letter-spacing: var(--tracking-tight);
-  line-height: 1.1;
-  margin-bottom: 16px;
+  line-height: 1.2;
 }
 
 .footer__link {
-  font-size: clamp(16px, 2.5vw, 36px);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-tight);
   transition: color 0.2s ease;
 }
 
 .footer__link:hover {
   color: var(--color-orange);
-}
-
-.footer__address {
-  font-size: clamp(16px, 2.5vw, 36px);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-tight);
-  margin-top: 4px;
-}
-
-.footer__social {
-  margin-top: 4px;
-  font-size: clamp(16px, 2.5vw, 36px);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-tight);
 }
 
 .footer__bottom {
