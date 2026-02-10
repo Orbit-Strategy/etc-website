@@ -1,0 +1,5 @@
+# ABOUTME: Cloudflare Pages headers — block all indexing and crawling
+# ABOUTME: Applied to all routes
+
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex

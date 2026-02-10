@@ -57,6 +57,91 @@ img {
 }
 
 /* ═══════════════════════════════════════════
+   PASSWORD GATE
+   ═══════════════════════════════════════════ */
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gate--hidden {
+  display: none;
+}
+
+.gate__box {
+  text-align: center;
+}
+
+.gate__logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 48px;
+}
+
+.gate__form {
+  display: flex;
+  gap: 12px;
+}
+
+.gate__input {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 16px;
+  padding: 12px 20px;
+  border: 1.5px solid #444;
+  border-radius: 30px;
+  background: transparent;
+  color: var(--color-white);
+  outline: none;
+  width: 240px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gate__input::placeholder {
+  color: #666;
+  text-transform: uppercase;
+}
+
+.gate__input:focus {
+  border-color: var(--color-white);
+}
+
+.gate__submit {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 14px;
+  padding: 12px 24px;
+  border: 1.5px solid var(--color-white);
+  border-radius: 30px;
+  background: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.gate__submit:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.gate__error {
+  margin-top: 16px;
+  color: var(--color-orange);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  min-height: 20px;
+}
+
+/* ═══════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════ */
 .hero {

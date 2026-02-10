@@ -5,6 +5,46 @@
   'use strict';
 
   /* ═══════════════════════════════════════════
+     PASSWORD GATE
+     ═══════════════════════════════════════════ */
+  var PASS_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // sha256 of 'password'
+  var gate = document.getElementById('gate');
+  var gateForm = document.getElementById('gate-form');
+  var gateInput = document.getElementById('gate-password');
+  var gateError = document.getElementById('gate-error');
+
+  // Check if already authenticated this session
+  if (sessionStorage.getItem('etc-auth') === '1') {
+    gate.classList.add('gate--hidden');
+  }
+
+  if (gateForm) {
+    gateForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var value = gateInput.value;
+      sha256(value).then(function (hash) {
+        if (hash === PASS_HASH) {
+          sessionStorage.setItem('etc-auth', '1');
+          gate.classList.add('gate--hidden');
+        } else {
+          gateError.textContent = 'Incorrect password';
+          gateInput.value = '';
+          gateInput.focus();
+        }
+      });
+    });
+  }
+
+  function sha256(message) {
+    var encoder = new TextEncoder();
+    var data = encoder.encode(message);
+    return crypto.subtle.digest('SHA-256', data).then(function (buffer) {
+      var array = Array.from(new Uint8Array(buffer));
+      return array.map(function (b) { return b.toString(16).padStart(2, '0'); }).join('');
+    });
+  }
+
+  /* ═══════════════════════════════════════════
      GLOBE SPIN ON SCROLL (nav monogram)
      ═══════════════════════════════════════════ */
   var globe = document.getElementById('globe');

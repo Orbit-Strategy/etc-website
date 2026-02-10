@@ -6,9 +6,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etc. — The Independent Agency Network</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ═══════════════════════════════════════════
+       PASSWORD GATE
+       ═══════════════════════════════════════════ -->
+  <div class="gate" id="gate">
+    <div class="gate__box">
+      <svg class="gate__logo" viewBox="0 0 95 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M69.3457 11.5107C78.142 11.5107 83.6991 16.8677 84.5166 24.1943H75.8447C75.5343 21.3678 74.158 18.041 69.4805 18.041C64.358 18.0411 62.1123 22.3477 62.1123 28.2559C62.1124 34.1638 64.296 38.4697 69.4805 38.4697C74.0959 38.4697 75.5342 35.327 75.8447 32.1943H84.5166C84.0198 39.6433 78.2763 45 69.4697 45C59.6079 44.9998 53.3059 38.1025 53.3057 28.2559C53.3057 18.4702 59.6078 11.5109 69.3457 11.5107ZM46.4346 12.5615H52.1777V19.0205H46.4346V34.2246C46.4346 37.551 47.6242 38.041 49.8076 38.041C50.8114 38.041 51.3085 37.9796 52.4883 37.7959V43.9492C50.5532 44.3778 49.0525 44.5615 47.3037 44.5615C40.9393 44.5615 37.876 41.8575 37.876 34.2861H37.8867V19.0205H33.3945V12.5615H37.8867V3.26562H46.4346V12.5615ZM90.4463 35.3369C93.3749 35.3369 95 37.4292 95 39.8271C94.9999 42.225 93.3127 44.3164 90.4463 44.3164C87.5801 44.3162 85.8312 42.2861 85.8311 39.8271C85.8311 37.4293 87.5179 35.3371 90.4463 35.3369ZM33.0225 7.87793H9.61426V17.4189H29.8975V25.2959H9.61426V36.1328H33.457V44.0107H0V0H33.0225V7.87793Z" fill="white"/>
+      </svg>
+      <form class="gate__form" id="gate-form">
+        <input type="password" class="gate__input" id="gate-password" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="gate__submit">Enter</button>
+      </form>
+      <p class="gate__error" id="gate-error"></p>
+    </div>
+  </div>
 
   <!-- ═══════════════════════════════════════════
        HERO SECTION
